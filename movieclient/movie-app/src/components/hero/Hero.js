@@ -19,25 +19,29 @@ const Hero = ({ movies }) => {
                 {
                     movies?.map((movie) => {
                         return (
-                            <Paper>
+                            <Paper key={movie.imdbId}>
                                 <div className='movie-card-container'>
                                     <div className='movie-card' style={{ "--img": `url(${movie.backdrops[0]})` }}>
                                         <div className='movie-detail'>
                                             <div className='movie-poster'>
                                                 <img src={movie.poster} alt='' />
                                             </div>
-                                            <div className='movie-title'>
-                                                <h4>{movie.title}</h4>
-                                            </div>
-                                            <Link to={`/Trailer/${movie.trailerLink.substring(movie.trailerLink.length - 11)}`}>
-                                                <div className='movie-buttons-container'>
-                                                    <div className='play-button-icon-container'>
-                                                        <FontAwesomeIcon className='play-button-icon' icon={faCirclePlay} />
+                                            <div className='info-container'>
+                                                <div className='movie-title'>
+                                                    <h4>{movie.title}</h4>
+                                                </div>
+                                                <div className='buttons-container'>
+                                                    <Link to={`/Trailer/${movie.trailerLink.substring(movie.trailerLink.length - 11)}`}>
+                                                        <div className='movie-buttons-container'>
+                                                            <div className='play-button-icon-container'>
+                                                                <FontAwesomeIcon className='play-button-icon' icon={faCirclePlay} />
+                                                            </div>
+                                                        </div>
+                                                    </Link>
+                                                    <div className="movie-review-button-container">
+                                                        <Button variant="info" onClick={() => reviews(movie.imdbId)} >Resenhas</Button>
                                                     </div>
                                                 </div>
-                                            </Link>
-                                            <div className="movie-review-button-container">
-                                                <Button variant="info" onClick={() => reviews(movie.imdbId)} >Reviews</Button>
                                             </div>
                                         </div>
                                     </div>

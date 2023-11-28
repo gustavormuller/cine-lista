@@ -43,6 +43,24 @@
     width: 48px;
 }
 
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 367px;
+    margin-top: 15px;
+}
+
+.buttons-container a {
+    margin-right: 15px;
+}
+
 .movie-title {
     color: white;
     display: flex;
@@ -79,11 +97,30 @@
     color: white;
 }
 
+.movie-review-button-container {
+    margin-left: 15px;
+}
+
 @media only screen and (max-width: 800px) {
     .movie-detail {
         flex-direction: column;
         align-items: center;
         top: 70px;
+        margin-left: 0;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .buttons-container a {
+        margin-right: 0;
+    }
+
+    .movie-review-button-container {
+        padding-top: 15px;
         margin-left: 0;
     }
 }

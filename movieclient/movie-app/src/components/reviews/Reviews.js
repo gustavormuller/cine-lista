@@ -3,8 +3,7 @@ import api from '../../api/axiosConfig';
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import ReviewForm from "../reviewForm/ReviewForm";
-
-import React from 'react'
+import './Reviews.css';
 
 const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
     const revText = useRef();
@@ -31,11 +30,11 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
     return (
         <Container>
             <Row>
-                <Col><h3>Resenhas</h3></Col>
+                <Col><h3 className="review-title">Resenhas</h3></Col>
             </Row>
-            <Row>
-                <Col>
-                    <img src={movie?.poster} alt="Poster do filme" />
+            <Row className="review-body">
+                <Col className="review-img-div">
+                    <img src={movie?.poster} alt="Poster do filme" className="review-img" />
                 </Col>
                 <Col>
                     {
@@ -71,7 +70,7 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
                 </Col>
             </Row>
             <Row>
-                <Col>
+                <Col className="responsive-hr">
                     <hr />
                 </Col>
             </Row>
