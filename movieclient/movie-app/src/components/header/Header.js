@@ -1,17 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faVideoSlash } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "react-bootstrap/Button";
-import { Container } from "react-bootstrap/Container";
-import { Nav } from "react-bootstrap/Nav";
-import { Navbar } from "react-bootstrap/Navbar";
+import { faFilm } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container fluid>
-                <Navbar.Brand href="/" style={{ "color": "gold" }}>
-                    <FontAwesomeIcon icon={faVideoSlash} />Gold
+                <Navbar.Brand href="/" style={{ "color": "#09d9d2" }}>
+                    <FontAwesomeIcon icon={faFilm} />CineList
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
