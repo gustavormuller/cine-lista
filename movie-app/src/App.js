@@ -16,7 +16,7 @@ function App() {
 
   const getMovies = async () => {
     try {
-      const response = await api.get("http://localhost:8080/api/v1/movies");
+      const response = await api.get("https://movie-api-y7v7.onrender.com/api/v1/movies");
       setMovies(response.data);
     } catch (err) {
       console.log(err);
@@ -25,7 +25,7 @@ function App() {
 
   const getMovieData = async (movieId) => {
     try {
-      const response = await api.get(`http://localhost:8080/api/v1/movies/${movieId}`);
+      const response = await api.get(`https://movie-api-y7v7.onrender.com/api/v1/movies/${movieId}`);
       const singleMovie = response.data;
       setMovie(singleMovie);
       setReviews(singleMovie.reviews);

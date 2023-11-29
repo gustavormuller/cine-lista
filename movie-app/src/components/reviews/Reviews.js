@@ -18,7 +18,7 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
         e.preventDefault();
         const rev = revText.current;
         try {
-            const response = await api.post("http://localhost:8080/api/v1/reviews", { reviewBody: rev.value, imdbId: movieId });
+            const response = await api.post("https://movie-api-y7v7.onrender.com/api/v1/reviews", { reviewBody: rev.value, imdbId: movieId });
             const updatedReviews = [...(reviews || []), { body: rev.value }];
             rev.value = "";
             setReviews(updatedReviews);
